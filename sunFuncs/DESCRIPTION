@@ -1,0 +1,9 @@
+Package: sunFuncs
+Version: 0.1-2
+Date: 2010-11-22
+Title: Sun functions from the maptools package
+Author: Sebastian P. Luque
+Maintainer: Devin S. Johnson <devin.johnson@noaa.gov>
+Depends: R (>= 2.4), sp (>= 0.9-47)
+Description: I just pulled out the sun functions from the maptools package and made a slight modification that handles locations near the dateline without returning 'NA'.
+License: GPL (>= 2)
