@@ -4,6 +4,26 @@
 ###############################################################################
 
 
+
+
+#' Calculates the next (or previous) crepuscule time
+#' 
+#'  ~~ A concise (1-5 lines) description of what the function does. ~~
+#' 
+#'  ~~ If necessary, more details than the description above ~~
+#' 
+#' @param crds  ~~Describe \code{crds} here~~
+#' @param dateTime  ~~Describe \code{dateTime} here~~
+#' @param solarDep  ~~Describe \code{solarDep} here~~
+#' @param direction  ~~Describe \code{direction} here~~
+#' @param proj4string  ~~Describe \code{proj4string} here~~
+#' @return  ~Describe the value returned  If it is a LIST, use 
+#' \item{comp1 }{Description of 'comp1'} 
+#' \item{comp2 }{Description of comp2'}  ...
+#' @note  ~~further notes~~
+#' @author  ~~who you are~~
+#' @export
+#' 
 next.crepuscule <- function(crds, dateTime, solarDep, direction, proj4string=CRS("+proj=longlat +datum=WGS84")){
 	tzone <- attr(as.POSIXlt(dateTime), "tzone")
 	#if(direction=="dusk") dateTime <- dateTime-86400
@@ -22,6 +42,26 @@ next.crepuscule <- function(crds, dateTime, solarDep, direction, proj4string=CRS
 	return(c1+c2+c3+c4+Epoch)
 }
 
+
+
+#' Calculate previous crepuscule day and time
+#' 
+#'  ~~ A concise (1-5 lines) description of what the function does. ~~
+#' 
+#'  ~~ If necessary, more details than the description above ~~
+#' 
+#' @param crds  ~~Describe \code{crds} here~~
+#' @param dateTime  ~~Describe \code{dateTime} here~~
+#' @param solarDep  ~~Describe \code{solarDep} here~~
+#' @param direction  ~~Describe \code{direction} here~~
+#' @param proj4string  ~~Describe \code{proj4string} here~~
+#' @return  ~Describe the value returned  If it is a LIST, use 
+#' \item{comp1 }{Description of 'comp1'} 
+#'  \item{comp2 }{Description of comp2'}  ...
+#' @note  ~~further notes~~
+#' @author  ~~who you are~~
+#' @export
+#' 
 prev.crepuscule <- function(crds, dateTime, solarDep, direction, proj4string=CRS("+proj=longlat +datum=WGS84")){
 	tzone <- attr(as.POSIXlt(dateTime), "tzone")
 	#if(direction=="dusk") dateTime <- dateTime-86400
